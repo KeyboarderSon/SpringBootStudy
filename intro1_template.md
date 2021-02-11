@@ -5,7 +5,7 @@
 ```@GetMapping("hello")``` <br> /hello로 들어가면 웹어플리케이션에서  ```@GetMapping``` 하단부 메서드를 호출한다.<br>
 
 
-```return "hello";```
+```return "hello";```<br>
 templates/hello.html 파일을 찾아 실행시켜라
 
 ```java
@@ -35,7 +35,7 @@ public class HelloController {
 <br>
 
 ```${data}```
-위 contorller의 ```model.addAttribute("data", "hello!!");```에서의 key값에 해당한다. value에 해당하는 후자 hello!!로 치환된다.
+<br>위 contorller의 ```model.addAttribute("data", "hello!!");```에서의 key값에 해당한다. value에 해당하는 후자 hello!!로 치환된다.
 
  ```html
  <!-- src/main/resources/templates/hello.html -->
