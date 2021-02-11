@@ -54,4 +54,4 @@ public class HelloController {
 <br>
 
 #### 실행화면
-![사진](./image/intro1_output.jpg)
+![사진](image/intro1_output.jpg)
