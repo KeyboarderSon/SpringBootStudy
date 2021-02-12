@@ -1,4 +1,4 @@
-#### 스프링 웹 개발 기초
+### 스프링 웹 개발 기초
 * 정적 컨텐츠
 html 파일을 **그대로** 웹브라우저에 보여줌
 * MVC와 템플릿 엔진
@@ -7,9 +7,10 @@ controller, model, template engine 화면 이 세 가지를 Model View controlle
 * API
 json과 같은 format으로 클라이언트에게 데이터를 전달함
 <br>
+
 ---
 
-#### 정적 컨텐츠
+### 정적 컨텐츠
 
 static/hello-static.html 파일을 만들었다.
 ```html
@@ -25,8 +26,9 @@ static/hello-static.html 파일을 만들었다.
 </html>
 ```
 <br>
+
 ##### 실행 결과
-![사진](image/intro2_Static.JPG)
+![사진](image/Intro2_Static.JPG)
 
 
 <br>
@@ -38,7 +40,7 @@ static/hello-static.html 파일을 만들었다.
 <br>
 ---
 
-#### MVC와 템플릿 엔진
+### MVC와 템플릿 엔진
 MVC : Model, View, Controller<br>
 view는 화면과 관련된 일만,<br>
 Controller는 뒷단과 관련된 일,<br>
@@ -79,7 +81,7 @@ templates/hello-template.html 파일로 찾아간다.
 
 ##### 실행 결과
 
-![사진](image/intro2_MVC.JPG)
+![사진](image/Intro2_MVC.JPG)
 
 
 파라미터 정보 보려면 Ctrl + p

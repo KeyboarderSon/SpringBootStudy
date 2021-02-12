@@ -52,11 +52,14 @@ public class HelloController {
 </html>
 ```
 <br>
-#### 빌드하고 실행하기<br>
+
+#### 빌드하고 실행하기
+
 (window) ```gradlew build``` 한 뒤<br>
 build/libs/ 경로로 들어가고<br>
 ```java -jar ~-SNAPSHOT.jar```<br>
-서버 배포할 때는 위 파일만 복사해서 서버에 넣어주고 위 명령어로 실행시키면 된다. 그러면 스프링이 서버에서 동작하게 된다.<br><br>
+서버 배포할 때는 위 파일만 복사해서 서버에 넣어주고 위 명령어로 실행시키면 된다. 그러면 스프링이 서버에서 동작하게 된다.
+<br><br>
 
 #### 실행화면
 ![사진](image/intro1_output.JPG)
