@@ -27,17 +27,19 @@ static/hello-static.html 파일을 만들었다.
 ```
 <br>
 
-##### 실행 결과
+#### 실행 결과
 ![사진](image/Intro2_Static.JPG)
 
-
 <br>
-##### 동작 방법
+
+#### 동작 방법
+
 1. 파일명 그대로 ```localhost:8080/hello-static.html``` 으로 들어가게 되면
 2. 컨트롤러 쪽에서 매핑된 컨트롤러를 찾아본다
 3. 관련 컨트롤러가 없어서 ```resources/static/hello-static.html```을 찾는다.
 4. 존재하면 해당 정적 파일 그대로 반환된다.
 <br>
+
 ---
 
 ### MVC와 템플릿 엔진
@@ -87,7 +89,7 @@ templates/hello-template.html 파일로 찾아간다.
 파라미터 정보 보려면 Ctrl + p
 
 
-##### 코드 동작 방법
+#### 코드 동작 방법
 1. http에서 GET 방식으로 파라미터를 넘겨준다.<br>
     ```localhost:8080/hello-mvc?name=Spring~!``` 에서의 ```?name=Spring~!```
 2. ```public String helloMvc(@RequestParam("name") String name, Model model)``` 파라미터 중 name에 Spring~! 이 들어가고<br>
@@ -97,7 +99,7 @@ templates/hello-template.html 파일로 찾아간다.
 
 그렇게 변환된 html이 결과로 나왔다.<br><br>
 
-##### 내부 동작 방법
+#### 내부 동작 방법
 1. ```localhost:8080/hello-mvc?name=Spring~!```
 2. 내장 **톰켓 서버**를 거치면서 스프링에게 이를 알린다.
 3. **Controller**에서 매핑된 메서드를 호출하고 return 시 hello-template, model(name:spring~!)
@@ -109,7 +111,7 @@ templates/hello-template.html 파일로 찾아간다.
 
 ---
 
-#### API 공부중
+### API 공부중
 
 ```@ResponseBody```
 http의 Header와 body부가 있는데 body부에 직접 넣어주겠다.
