@@ -111,9 +111,51 @@ templates/hello-template.html 파일로 찾아간다.
 
 ---
 
-### API 공부중
+### API
 
 ```@ResponseBody```
-http의 Header와 body부가 있는데 body부에 직접 넣어주겠다.
-view가 없고 문자가 그대로 내려간다.
-<br> return의 데이터를 그대로 보여준다.
+* http에는 Header와 body부가 있는데 body부에 직접 넣어주겠다.
+*  view가 없다.
+*  return이 객체이고 ```@ResponseBody```라고 해놓으면 json으로 반환하는 것이 기본이다.
+*  json 파일은 {key : value} 의 형태이다.
+
+
+```java
+    @GetMapping("hello-api")
+    @ResponseBody
+    public Hello helloApi(@RequestParam("name") String name){
+        //자동완성단축키 Ctrl + Shift + Enter
+        Hello hello = new Hello();
+        hello.setName(name);
+        
+        //객체를 반환
+        return hello;
+    }
+
+    /* Hello class, property 접근 방식 */
+    static class Hello{
+        private String name;
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+```
+
+
+#### 실행 결과
+![사진](image/Intro2_API.JPG)
+
+
+#### @ResponseBody 사용 원리
+1. localhost:8080/hello-api
+2. 내장 톰켓 서버가 스프링에게 정보가 왔음을 알린다.
+3. Controller을 찾고 @ResponseBody라는 annotation이 붙어있기 때문에 http 응답으로 데이터를 넘겨야 겠구나 라고 생각한다.
+   * return이 문자열이면 바로 넘겨주면 되는데
+   * return이 위와 같이 객체면 json 방식으로 데이터를 만들어서 http 응답으로 반환.
+4. ```viewResolver``` 대신 ```HttpMessageConverter```이 동작한다. ```MappingJackson2HttpMessageConverter```과 <br> ```StringHttpMessageConverter```이 있는데 <br>
+   무엇을 return하느냐에 따라 둘 중 하나가 작동한다. <br>
+   전자는 객체를 Jackson 라이브러리를 통해 json 파일로 변환해주는 것이다. 그리하여 http body부에 실어 보낸다.
