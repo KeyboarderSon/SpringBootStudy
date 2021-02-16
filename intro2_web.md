@@ -147,7 +147,7 @@ templates/hello-template.html 파일로 찾아간다.
 
 
 #### 실행 결과
-![사진](image/Intro2_API.JPG)
+![사진](image/intro2_API.JPG)
 
 
 #### @ResponseBody 사용 원리
